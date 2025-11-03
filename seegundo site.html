@@ -1,0 +1,467 @@
+
+ <!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW M Liagem  - The Ultimate Driving Machines</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f9f8;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #0066b1 0%, #000000 100%);
+        }
+        
+        .car-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .bmw-blue {
+            color: #9300b1;
+        }
+        
+        .bmw-blue-bg {
+            background-color: #0079b1;
+        }
+        
+        .bmw-m-red {
+            color: #e4002b;
+        }
+        
+        .bmw-m-red-bg {
+            background-color: #e4002b;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-black text-white py-4 px-6 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="https://www.bmw.com/etc.clientlibs/ds2-webcomponents/clientlibs/clientlib/resources/img/BMW_White_Logo.svg" alt="BMW Logo" class="h-10">
+                <span class="text-xl font-bold bmw-m-red">M POWER</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#history" class="hover:text-blue-300 transition">History</a>
+                <a href="#models" class="hover:text-blue-300 transition">Models</a>
+                <a href="#performance" class="hover:text-blue-300 transition">Performance</a>
+                <a href="#gallery" class="hover:text-blue-300 transition">Gallery</a>
+            </div>
+            <button class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-gradient text-white py-20 px-6">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">BMW M LINEAGE</h1>
+                <p class="text-xl mb-8">The pinnacle of driving performance since 1972. Explore the legendary M series that redefined sports sedans and coupes.</p>
+                <div class="flex space-x-4">
+                    <a href="#models" class="bg-white text-black px-6 py-3 rounded-full font-bold hover:bg-gray-200 transition">View Models</a>
+                    <a href="#history" class="border-2 border-white px-6 py-3 rounded-full font-bold hover:bg-white hover:text-black transition">Our Heritage</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://www.bmw-m.com/content/dam/bmw/marketBMW_M/common/topics/magazine-article-pool/2021/bmw-m3-m4-csl/bmw-m3-m4-csl-stage-xxl.jpg" alt="BMW M Models" class="rounded-lg shadow-2xl max-h-96">
+            </div>
+        </div>
+    </header>
+
+    <!-- History Section -->
+    <section id="history" class="py-16 px-6 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">THE M LEGACY</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <img src="https://www.bmw-m.com/content/dam/bmw/marketBMW_M/common/topics/magazine-article-pool/2020/bmw-m-heritage/bmw-m1-procar-stage-xxl.jpg" alt="BMW M1" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h3 class="text-2xl font-bold mb-4 bmw-m-red">Born on the Track</h3>
+                    <p class="mb-6 text-gray-700">The BMW M story began in 1972 with the founding of BMW Motorsport GmbH. What started as a racing division soon translated its track expertise to the road, creating the most thrilling performance cars in BMW's lineup.</p>
+                    <p class="mb-6 text-gray-700">The first true M car, the M1 supercar, debuted in 1978 with a mid-engine layout and striking Giugiaro design. This was followed by the iconic E28 M5 in 1984, establishing the M formula of combining everyday usability with racetrack performance.</p>
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <p class="italic mb-2">"M stands for Motorsport. But it also stands for Magic, for Mystique, for Maximum performance."</p>
+                        <p class="font-bold">- BMW M Division</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Models Section -->
+    <section id="models" class="py-16 px-6 bg-gray-100">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">THE M LINEAGE</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">From compact coupes to luxury super sedans, each M model carries the DNA of BMW Motorsport.</p>
+            
+            <!-- Model Filter -->
+            <div class="flex justify-center mb-12">
+                <div class="inline-flex rounded-md shadow-sm" role="group">
+                    <button type="button" class="px-4 py-2 text-sm font-medium rounded-l-lg bg-white border border-gray-200 hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-blue-500" onclick="filterModels('all')">
+                        All Models
+                    </button>
+                    <button type="button" class="px-4 py-2 text-sm font-medium bg-white border-t border-b border-gray-200 hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-blue-500" onclick="filterModels('coupe')">
+                        Coupes
+                    </button>
+                    <button type="button" class="px-4 py-2 text-sm font-medium bg-white border border-gray-200 hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-blue-500" onclick="filterModels('sedan')">
+                        Sedans
+                    </button>
+                    <button type="button" class="px-4 py-2 text-sm font-medium bg-white border-t border-b border-gray-200 hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-blue-500" onclick="filterModels('suv')">
+                        SUVs
+                    </button>
+                    <button type="button" class="px-4 py-2 text-sm font-medium rounded-r-lg bg-white border border-gray-200 hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-blue-500" onclick="filterModels('special')">
+                        Special Editions
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Model Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="model-grid">
+                <!-- M1 -->
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300 coupe special">
+                    <img src="https://cdn.motor1.com/images/mgl/6ZJbP/s1/bmw-m1-procar.jpg" alt="BMW M1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">BMW M1 (E26)</h3>
+                            <span class="bg-black text-white px-2 py-1 rounded text-xs font-bold">1978-1981</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">The original M supercar with mid-engine layout and 277 HP.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-bold bmw-m-red">0-60: 5.6s</span>
+                            <span class="text-sm font-bold">Top: 162 mph</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- M2 -->
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300 coupe">
+                    <img src="https://www.bmw-m.com/content/dam/bmw/marketBMW_M/common/topics/magazine-article-pool/2022/bmw-m2/bmw-m2-coupe-stage-xxl.jpg" alt="BMW M2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">BMW M2 (G87)</h3>
+                            <span class="bg-black text-white px-2 py-1 rounded text-xs font-bold">2023-Present</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">The most compact M car with 453 HP and rear-wheel drive.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-bold bmw-m-red">0-60: 4.1s</span>
+                            <span class="text-sm font-bold">Top: 155 mph</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- M3 -->
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300 sedan">
+                    <img src="https://www.bmw-m.com/content/dam/bmw/marketBMW_M/common/topics/magazine-article-pool/2020/bmw-m3-sedan/bmw-m3-sedan-stage-xxl.jpg" alt="BMW M3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">BMW M3 (G80)</h3>
+                            <span class="bg-black text-white px-2 py-1 rounded text-xs font-bold">2021-Present</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">The iconic sports sedan now with 503 HP and available AWD.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-bold bmw-m-red">0-60: 3.4s</span>
+                            <span class="text-sm font-bold">Top: 155 mph</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- M4 -->
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300 coupe">
+                    <img src="https://www.bmw-m.com/content/dam/bmw/marketBMW_M/common/topics/magazine-article-pool/2020/bmw-m4-coupe/bmw-m4-coupe-stage-xxl.jpg" alt="BMW M4" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">BMW M4 (G82)</h3>
+                            <span class="bg-black text-white px-2 py-1 rounded text-xs font-bold">2021-Present</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">The coupe counterpart to the M3 with aggressive styling.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-bold bmw-m-red">0-60: 3.8s</span>
+                            <span class="text-sm font-bold">Top: 155 mph</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- M5 -->
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300 sedan">
+                    <img src="https://www.bmw-m.com/content/dam/bmw/marketBMW_M/common/topics/magazine-article-pool/2020/bmw-m5/bmw-m5-stage-xxl.jpg" alt="BMW M5" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">BMW M5 (F90)</h3>
+                            <span class="bg-black text-white px-2 py-1 rounded text-xs font-bold">2018-2023</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">The super sedan with 600 HP and AWD system.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-bold bmw-m-red">0-60: 2.8s</span>
+                            <span class="text-sm font-bold">Top: 190 mph</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- M8 -->
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300 coupe">
+                    <img src="https://www.bmw-m.com/content/dam/bmw/marketBMW_M/common/topics/magazine-article-pool/2019/bmw-8-series-coupe/bmw-m8-coupe-stage-xxl.jpg" alt="BMW M8" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">BMW M8 (F92)</h3>
+                            <span class="bg-black text-white px-2 py-1 rounded text-xs font-bold">2019-Present</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">The grand tourer with 617 HP and luxurious interior.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-bold bmw-m-red">0-60: 3.0s</span>
+                            <span class="text-sm font-bold">Top: 190 mph</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- X5 M -->
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300 suv">
+                    <img src="https://www.bmw-m.com/content/dam/bmw/marketBMW_M/common/topics/magazine-article-pool/2019/bmw-x5-m/bmw-x5-m-stage-xxl.jpg" alt="BMW X5 M" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">BMW X5 M (F95)</h3>
+                            <span class="bg-black text-white px-2 py-1 rounded text-xs font-bold">2020-Present</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">High-performance SUV with 617 HP and racetrack agility.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-bold bmw-m-red">0-60: 3.7s</span>
+                            <span class="text-sm font-bold">Top: 177 mph</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- M3 CS -->
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300 sedan special">
+                    <img src="https://www.bmw-m.com/content/dam/bmw/marketBMW_M/common/topics/magazine-article-pool/2023/bmw-m3-cs/bmw-m3-cs-stage-xxl.jpg" alt="BMW M3 CS" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">BMW M3 CS (G80)</h3>
+                            <span class="bg-black text-white px-2 py-1 rounded text-xs font-bold">2023</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Limited edition with 543 HP and extensive carbon fiber.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-bold bmw-m-red">0-60: 3.2s</span>
+                            <span class="text-sm font-bold">Top: 188 mph</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- M4 CSL -->
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300 coupe special">
+                    <img src="https://www.bmw-m.com/content/dam/bmw/marketBMW_M/common/topics/magazine-article-pool/2022/bmw-m4-csl/bmw-m4-csl-stage-xxl.jpg" alt="BMW M4 CSL" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">BMW M4 CSL (G82)</h3>
+                            <span class="bg-black text-white px-2 py-1 rounded text-xs font-bold">2022</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">543 HP lightweight special with only 1,000 units made.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-bold bmw-m-red">0-60: 3.6s</span>
+                            <span class="text-sm font-bold">Top: 191 mph</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Section -->
+    <section id="performance" class="py-16 px-6 bg-black text-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">M PERFORMANCE TECHNOLOGY</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6 bg-gray-900 rounded-lg">
+                    <div class="text-5xl mb-4 bmw-m-red">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">POWER & TORQUE</h3>
+                    <p>M engines are hand-built by specialists, featuring high-revving characteristics and immediate throttle response. The current S58 engine produces up to 503 HP.</p>
+                </div>
+                
+                <div class="text-center p-6 bg-gray-900 rounded-lg">
+                    <div class="text-5xl mb-4 bmw-m-red">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">DRIVETRAIN</h3>
+                    <p>M xDrive intelligently combines rear-wheel drive dynamics with all-wheel drive traction. The Active M Differential ensures optimal power distribution.</p>
+                </div>
+                
+                <div class="text-center p-6 bg-gray-900 rounded-lg">
+                    <div class="text-5xl mb-4 bmw-m-red">
+                        <i class="fas fa-weight"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">LIGHTWEIGHT</h3>
+                    <p>Extensive use of carbon fiber reinforced plastic (CFRP) for roofs, hoods, and interior components reduces weight while increasing rigidity.</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-4 bmw-m-red">TRACK-READY BRAKING</h3>
+                    <p class="mb-6">M Compound brakes with 6-piston front calipers provide fade-resistant stopping power. Optional carbon-ceramic brakes offer even greater performance.</p>
+                    <h3 class="text-2xl font-bold mb-4 bmw-m-red">ADAPTIVE SUSPENSION</h3>
+                    <p>M-specific adaptive suspension with electronically controlled dampers adjusts to road conditions and driving style within milliseconds.</p>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://www.bmw-m.com/content/dam/bmw/marketBMW_M/common/topics/magazine-article-pool/2020/bmw-m-performance-parts/bmw-m-performance-parts-stage-xxl.jpg" alt="BMW M Performance" class="rounded-lg max-h-80">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->1
+    <section id="gallery" class="py-16 px-6 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">M </h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="relative group overflow-hidden rounded-lg h-64">
+                    <img src="https://www.bmw-m.com/content/dam/bmw/marketBMW_M/common/topics/magazine-article-pool/2021/bmw-m3-m4-csl/bmw-m3-m4-csl-stage-xxl.jpg" alt="BMW M3/M4" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span class="text-white font-bold text-xl">M3 & M4</span>
+                    </div>
+                </div>
+                
+                <div class="relative group overflow-hidden rounded-lg h-64">
+                    <img src="https://www.bmw-m.com/content/dam/bmw/marketBMW_M/common/topics/magazine-article-pool/2022/bmw-m2/bmw-m2-coupe-stage-xxl.jpg" alt="BMW M2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span class="text-white font-bold text-xl">M2 Coupe</span>
+                    </div>
+                </div>
+                
+                <div class="relative group overflow-hidden rounded-lg h-64">
+                    <img src="https://www.bmw-m.com/content/dam/bmw/marketBMW_M/common/topics/magazine-article-pool/2020/bmw-m5/bmw-m5-stage-xxl.jpg" alt="BMW M5" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span class="text-white font-bold text-xl">M5 Sedan</span>
+                    </div>
+                </div>
+                
+                <div class="relative group overflow-hidden rounded-lg h-64">
+                    <img src="https://www.bmw-m.com/content/dam/bmw/marketBMW_M/common/topics/magazine-article-pool/2019/bmw-x5-m/bmw-x5-m-stage-xxl.jpg" alt="BMW X5 M" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span class="text-white font-bold text-xl">X5 M</span>
+                    </div>
+                </div>
+                
+                <div class="relative group overflow-hidden rounded-lg h-64">
+                    <img src="https://www.bmw-m.com/content/dam/bmw/marketBMW_M/common/topics/magazine-article-pool/2022/bmw-m4-csl/bmw-m4-csl-stage-xxl.jpg" alt="BMW M4 CSL" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span class="text-white font-bold text-xl">M4 </span>
+                    </div>
+                </div>
+                
+                <div class="relative group overflow-hidden rounded-lg h-64">
+                    <img src="https://www.bmw-m.com/content/dam/bmw/marketBMW_M/common/topics/magazine-article-pool/2020/bmw-m8-gran-coupe/bmw-m8-gran-coupe-stage-xxl.jpg" alt="BMW M8" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span class="text-white font-bold text-xl">M8 Gran Coupe</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 px-6 bmw-blue-bg text-white">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6"> M</h2>
+            <p class="mb-8 text-lg">Subscribe to receive the latest news, exclusive offers, and updates about the  M lineup.</p>
+            <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded text-black focus:outline-none focus:ring-2 focus:ring-white">
+                <button type="submit" class="bg-black text-white px-6 py-3 rounded font-bold hover:bg-gray-800 transition">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12 px-6">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 bmw-m-red">B M</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-blue-300">Models</a></li>
+                        <li><a href="#" class="hover:text-blue-300">Performance</a></li>
+                        <li><a href="#" class="hover:text-blue-300">Heritage</a></li>
+                        <li><a href="#" class="hover:text-blue-300">Experience</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-blue-300">About M</a></li>
+                        <li><a href="#" class="hover:text-blue-300">Careers</a></li>
+                        <li><a href="#" class="hover:text-blue-300">Press</a></li>
+                        <li><a href="#" class="hover:text-blue-300">Sustainability</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Customer Service</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-blue-300">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-blue-300">Find a Dealer</a></li>
+                        <li><a href="#" class="hover:text-blue-300">Test Drive</a></li>
+                        <li><a href="#" class="hover:text-blue-300"></a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Connect</h3>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-2xl hover:text-blue-300"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-2xl hover:text-blue-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-2xl hover:text-blue-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-2xl hover:text-blue-300"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <p>© 2023 M GmbH</p>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800 text-sm text-gray-400">
+                <p>M GmbH. The consumption and emissions values were determined according to the legally specified measuring methods. The figures refer to vehicles on the German automotive market. For current information on fuel consumption and official specific CO₂ emissions of new cars, please refer to the "Manual on fuel consumption, CO₂ emissions and power consumption of new cars" available free of charge at all sales outlets and from DAT Deutsche Automobil Treuhand GmbH, Hellmuth-Hirth-Str. 1, 73760 Ostfildern, Germany, or at www.dat.de.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Model filter function
+        function filterModels(category) {
+            const models = document.querySelectorAll('.car-card');
+            
+            models.forEach(model => {
+                if (category === 'all') {
+                    model.style.display = 'block';
+                } else if (model.classList.contains(category)) {
+                    model.style.display = 'block';
+                } else {
+                    model.style.display = 'none';
+                }
+            });
+        }
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+    </script>
+</body>
+</html> 
